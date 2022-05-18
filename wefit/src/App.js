@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "../src/pages/Home.jsx";
 import FormPage from "./pages/FormPage.jsx";
-import "../src/components/Form.css";
 
 function App() {
   return (
