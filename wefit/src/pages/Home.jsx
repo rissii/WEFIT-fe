@@ -31,7 +31,7 @@ const Home = () => {
                 )}
             <div className="home">
                 <h1 className="primary-title">Don’t dream of it. Train for it.</h1>
-                <button className="primary-button" onClick={handleClick}>
+                <button className="mt-5 primary-button" onClick={handleClick}>
                  Signup
                 </button>
 

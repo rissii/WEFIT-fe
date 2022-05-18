@@ -8,9 +8,11 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
 
   return (
     <nav>
-      <div className="logo-container">
-      <FaDumbbell />
-      Wefit
+      <div >
+      
+     <h1 style={{
+            fontSize: "40px",
+          }} className=' text-white mt-3 ml-3'>WEFIT</h1>
       </div>
       {!authToken && !minimal && (
         <button
