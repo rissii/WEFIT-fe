@@ -1,4 +1,5 @@
 import Nav from '../components/Nav'
+import server from "../services/server";
 import {useState} from 'react'
 
 const Questionary = () => {
@@ -18,8 +19,9 @@ const Questionary = () => {
 
     })
     const handleSubmit = async (e) => {
-        console.log('submitted')
         e.preventDefault()
+        const response = await server.getUserData()
+        console.log(response)
     //     try {
     //         const response = await axios.put('http://localhost:8000/user', {formData})
     //         console.log(response)
@@ -32,7 +34,6 @@ const Questionary = () => {
     // }
 
     const handleChange = (e) => {
-        console.log('e', e)
         const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
         const name = e.target.name
 
