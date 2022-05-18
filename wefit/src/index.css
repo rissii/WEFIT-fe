@@ -1,24 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700;800&display=swap');
-
 html, body {
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
 h2 {
     font-style: italic;
 }
-
 * {
     font-family: 'Readex Pro', sans-serif;
 }
-
 .primary-title {
     font-size: 90px;
     color: rgb(255, 255, 255);
 }
-
 .primary-button {
     color: rgb(255,255,255);
     text-transform: uppercase;
@@ -28,11 +23,9 @@ h2 {
     border-radius: 30px;
     border: none;
 }
-
 .primary-button:hover {
     background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
 }
-
 .secondary-button {
     color: rgb(121, 119, 119);
     background-color: rgb(255, 255, 255);
@@ -44,15 +37,11 @@ h2 {
     border: solid 2px rgb(121, 119, 119);
     margin: 6px;
 }
-
 .secondary-button:hover {
     color: rgb(48, 48, 48);
     border: solid 2px rgb(48, 48, 48);
 }
-
-
 /*-------- Navbar --------*/
-
 nav {
     width: 100%;
     display: flex;
@@ -60,7 +49,6 @@ nav {
 }
 
 nav .nav-button {
-   
     margin: 10px;
     color: rgb(255,255,255);
     font-size: 15px;
@@ -68,22 +56,17 @@ nav .nav-button {
     padding: 12px 20px;
     border-radius: 10px;
     border: none;
+    margin: 10px;
 }
 
-nav .nav-button:disabled {
-    background-color: rgb(181, 180, 180);
-    color: rgb(189, 42, 90);
-}
 
 nav .logo-container {
     width: 70px;
     margin: 15px;
 }
-
 nav .logo-container .logo {
     width: 100%;
 }
-
 /*-------- Home page --------*/
 .overlay {
     width: 100vw;
@@ -95,29 +78,24 @@ nav .logo-container .logo {
             rgba(0, 0, 0, 0) 100%
     ), url('')
 }
-
 .home {
     margin-top: 30vh;
 }
-
 /*-------- Auth Modal --------*/
 .auth-modal {
     display: flex;
     flex-direction: column;
-    max-width: 30rem;
-    height: 40rem;
+    height: 70rem;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 40px;
     margin: 0 auto;
 }
-
 .auth-modal .close-icon {
     display: flex;
     justify-content: end;
     margin-bottom: 2rem;
 }
-
 .auth-modal form {
     display: flex;
     flex-direction: column;
@@ -125,13 +103,13 @@ nav .logo-container .logo {
 .auth-modal h1 {
     font-size: 25px;
 }
-
 .auth-modal input[type=password],
 .auth-modal input[type=email],
 .auth-modal input[type=userName] {
     padding: 8px;
     margin: 8px;
     font-size: 17px;
+    border: 1px solid black;
     border: 1px solid grey;
 }
 
@@ -139,12 +117,10 @@ nav .logo-container .logo {
 .onboarding {
     border-top: solid 1px rgb(213, 213, 213);
 }
-
 .onboarding form {
     display: flex;
     justify-content: center;
 }
-
 .onboarding form section {
     display: flex;
     flex-direction: column;
@@ -152,7 +128,6 @@ nav .logo-container .logo {
     width: 35%;
     text-align: start;
 }
-
 .onboarding form input {
     padding: 15px 30px;
     margin: 10px 0;
@@ -160,26 +135,21 @@ nav .logo-container .logo {
     border: solid 2px rgb(219, 219, 219);
     border-radius: 10px;
 }
-
 .onboarding form label {
     margin: 10px 0;
 }
-
 .onboarding form .multiple-input-container {
     display: flex;
     flex-direction: row;
 }
-
 .onboarding form input::-webkit-outer-spin-button,
 .onboarding form input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 .onboarding form .multiple-input-container input {
     margin-right: 10px;
 }
-
 .onboarding form .multiple-input-container label {
     padding: 10px;
     border: solid 2px rgb(144, 144, 144);
@@ -187,37 +157,29 @@ nav .logo-container .logo {
     transition: all 0.3s;
     margin-right: 10px;
 }
-
 .onboarding form input[type=radio] {
     display: none;
 }
-
 .onboarding form input[type=number] {
     width: 10%;
 }
-
 .onboarding form input[type=radio]:checked + label {
     border: solid 2px rgb(221, 39, 22);
 }
-
 .onboarding form input[type=submit]:hover {
     background-color: rgb(235, 235, 235);
 }
-
 .onboarding form input[type=submit]:active {
     background-color: rgb(226, 115, 115);
 }
-
 .onboarding form .photo-container img {
     width: 100%
 }
-
 /*-------- Dashboard  --------*/
 .dashboard {
     display: flex;
     justify-content: space-between;
 }
-
 .dashboard .swipe-container {
     width: 70%;
     display: flex;
@@ -226,16 +188,13 @@ nav .logo-container .logo {
     align-items: center;
     height: 100vh;
 }
-
 .swipe {
     position: absolute;
 }
-
 .dashboard .card-container {
     width: 400px;
     height: 650px;
 }
-
 .card {
     width: 400px;
     height: 650px;
@@ -243,17 +202,14 @@ nav .logo-container .logo {
     background-size: cover;
     background-position: center;
 }
-
 .card h3 {
     margin-top: 0;
 }
-
 .dashboard .swipe-info {
     position: absolute;
     bottom: 0;
     padding: 10px;
 }
-
 /*-------- Chat Container --------*/
 .chat-container {
     background-color: rgb(255, 255, 255);
@@ -263,7 +219,6 @@ nav .logo-container .logo {
     text-align: left;
     z-index: 1;
 }
-
 .chat-container .chat-container-header {
     background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
     height: 100px;
@@ -271,7 +226,6 @@ nav .logo-container .logo {
     justify-content: space-between;
     align-items: center;
 }
-
 .chat-container .option {
     border: none;
     background-color: rgb(255, 255, 255);
@@ -280,11 +234,9 @@ nav .logo-container .logo {
     margin: 2px;
     padding: 10px;
 }
-
 .chat-container .option:disabled {
     border-bottom: solid 4px rgb(187, 187, 187);
 }
-
 .chat-container .profile,
 .chat-container .log-out-icon {
     display: flex;
@@ -292,7 +244,6 @@ nav .logo-container .logo {
     padding: 20px;
     color: rgb(255, 255, 255);
 }
-
 .img-container {
     height: 30px;
     width: 30px;
@@ -300,11 +251,9 @@ nav .logo-container .logo {
     overflow: hidden;
     margin: 10px;
 }
-
 .img-container img {
     width: 100%;
 }
-
 /*-------- Chat Display --------*/
 .chat-display,
 .matches-display {
@@ -312,57 +261,9 @@ nav .logo-container .logo {
     height: 60vh;
     overflow-y: auto;
 }
-
 /*-------- Chat Input --------*/
 .chat-input {
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
