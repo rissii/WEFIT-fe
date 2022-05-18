@@ -3,7 +3,7 @@ import {useState} from 'react'
 import Signup from '../components/Signup'
 
 const Home = () => {
-    const [showModal, setShowModal] = useState(true)
+    const [showModal, setShowModal] = useState(false)
     const [isSignUp, setIsSignUp] = useState(true)
 
     const handleClick = () => {

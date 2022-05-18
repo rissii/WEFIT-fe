@@ -355,7 +355,6 @@ export default function Form() {
 
             <input type="submit" />
           </section>
-
           <section>
             <label htmlFor="url">Profile Photo</label>
             <input
