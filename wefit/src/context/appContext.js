@@ -42,7 +42,7 @@ debugger
 
     const response = await api.post("/auth/login", currentUser);
 
-    const  user  = response.data.data;
+    const user  = response.data.data;
    
 
     addUserToLocalStorage( user );

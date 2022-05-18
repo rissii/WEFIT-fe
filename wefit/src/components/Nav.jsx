@@ -8,7 +8,7 @@ const Nav = ({ authToken, setShowModal, showModal, setIsSignUp }) => {
   };
 
   return (
-    <nav>
+    <nav className="mb-5">
       <div >
       
      <h1 style={{
