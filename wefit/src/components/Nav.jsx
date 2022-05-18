@@ -1,3 +1,4 @@
+import logo from "./logo.jpg";
 import {FaDumbbell} from 'react-icons/fa'
 
 const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
