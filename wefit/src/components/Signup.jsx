@@ -1,13 +1,34 @@
 import { useState } from 'react'
+import { useAppContext } from '../context/appContext';
+import {useNavigate} from 'react-router-dom'
 
 
 const Signup = ({ setShowModal,  isSignUp }) => {
-    const [userName, setuserName] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
-    const [confirmPassword, setConfirmPassword] = useState(null)
-    const [error, setError] = useState(null)
+
+    const { user, isUser, setisUser, registerUser, loginUser } =
+    useAppContext();
+    const [userName, setuserName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [error, setError] = useState("")
     //const [ cookies, setCookie, removeCookie] = useCookies(null)
+
+
+    const currentUser = {
+        email: email.toLowerCase(),
+        userName : userName,
+        password : password
+      };
+
+      const currentUserLogin = {
+        email: email.toLowerCase(),
+        password : password
+      };
+
+
+
+
 
     
 
@@ -26,23 +47,8 @@ const Signup = ({ setShowModal,  isSignUp }) => {
                 setError('Passwords need to match!')
                 return
             }
-            
-
-        //     const response = await axios.post(`http://localhost:8000/${isSignUp ? 'signup' : 'login'}`, { email, password })
-
-        //     setCookie('AuthToken', response.data.token)
-        //     setCookie('UserId', response.data.userId)
-
-        //     const success = response.status === 201
-        //     if (success && isSignUp) navigate ('/onboarding')
-        //     if (success && !isSignUp) navigate ('/dashboard')
-
-        //     window.location.reload()
-
-        // } catch (error) {
-        //     console.log(error)
-        // }
-
+            (!isSignUp ? loginUser(currentUserLogin) : registerUser(currentUser) )
+           
     }
 
     return (
@@ -98,7 +104,7 @@ const Signup = ({ setShowModal,  isSignUp }) => {
                 />}
                 <button style={{
             background: "linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64))",
-          }} className="text-white secondary-button mt-4 mb-4" type="submit"> Submit </button>
+          }} className="text-white secondary-button mt-4 mb-4" type="submit" onSubmit={handleSubmit} > Submit </button>
                 <p>{error}</p>
             </form>
 

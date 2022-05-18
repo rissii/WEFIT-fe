@@ -45,7 +45,6 @@ const Questionary = () => {
     return (
         <>
             <Nav
-                minimal={true}
                 setShowModal={() => {
                 }}
                 showModal={false}
