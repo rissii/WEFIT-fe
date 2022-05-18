@@ -1,4 +1,6 @@
 import logo from "./logo.jpg";
+import {FaDumbbell} from 'react-icons/fa'
+
 const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {
     setShowModal(true);
@@ -7,8 +9,11 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
 
   return (
     <nav>
-      <div className="logo-container">
-        {/* <img src={logo} alt="logo" /> */}
+      <div >
+      
+     <h1 style={{
+            fontSize: "40px",
+          }} className=' text-white mt-3 ml-3'>WEFIT</h1>
       </div>
       {!authToken && !minimal && (
         <button

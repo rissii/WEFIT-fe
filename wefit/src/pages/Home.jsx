@@ -26,16 +26,17 @@ const Home = () => {
                 showModal={showModal}
                 setIsSignUp={setIsSignUp}
             />
+             {showModal && (
+                    <Signup setShowModal={setShowModal} isSignUp={isSignUp}/>
+                )}
             <div className="home">
                 <h1 className="primary-title">Don’t dream of it. Train for it.</h1>
-                <button className="primary-button" onClick={handleClick}>
+                <button className="mt-5 primary-button" onClick={handleClick}>
                  Signup
                 </button>
 
 
-                {showModal && (
-                    <Signup setShowModal={setShowModal} isSignUp={isSignUp}/>
-                )}
+               
             </div>
         </div>
     )
