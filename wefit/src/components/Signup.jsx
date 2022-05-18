@@ -46,7 +46,7 @@ const Signup = ({ setShowModal,  isSignUp }) => {
     }
 
     return (
-        <div  className="auth-modal flex justify-center">
+        <div  className=" auth-modal flex justify-center">
             
             <button
             className="d-flex justify-end  "

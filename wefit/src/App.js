@@ -1,11 +1,7 @@
-
-import './App.css';
+import './App.css'
 import Home from '../src/pages/Home'
-import Questionary from './pages/Questionary';
 import { Route, Routes } from "react-router-dom";
 import FormPage from "./pages/FormPage.jsx";
-import "../src/components/Form.css";
-
 function App() {
   return (
     <div className="App">

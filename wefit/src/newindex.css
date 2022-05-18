@@ -49,6 +49,11 @@ nav {
 }
 
 nav .nav-button {
+    color: rgb(254, 48, 114);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+
     margin: 10px;
     color: rgb(255,255,255);
     font-size: 15px;
@@ -59,7 +64,10 @@ nav .nav-button {
     margin: 10px;
 }
 
-
+nav .nav-button:disabled {
+    background-color: rgb(181, 180, 180);
+    color: rgb(189, 42, 90);
+}
 nav .logo-container {
     width: 70px;
     margin: 15px;
@@ -72,11 +80,7 @@ nav .logo-container .logo {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.65) 0%,
-            rgba(0, 0, 0, 0) 100%
-    ), url('')
+    
 }
 .home {
     margin-top: 30vh;
@@ -94,7 +98,7 @@ nav .logo-container .logo {
 }
 .auth-modal .close-icon {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 2rem;
 }
 .auth-modal form {
