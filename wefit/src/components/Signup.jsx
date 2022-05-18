@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 const Signup = ({ setShowModal,  isSignUp }) => {
-    const [name, setName] = useState(null)
+    const [userName, setuserName] = useState(null)
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
     const [confirmPassword, setConfirmPassword] = useState(null)
@@ -11,7 +11,7 @@ const Signup = ({ setShowModal,  isSignUp }) => {
 
     
 
-    console.log(name, email, password, confirmPassword)
+    console.log(userName, email, password, confirmPassword)
 
 
     const handleClick = () => {
@@ -46,21 +46,31 @@ const Signup = ({ setShowModal,  isSignUp }) => {
     }
 
     return (
-        <div className="auth-modal">
-            <div className="close-icon" onClick={handleClick}>ⓧ</div>
-
-            <h2>{isSignUp ? 'CREATE ACCOUNT': 'LOG IN'}</h2>
-            <p>By clicking Log In, you agree to our terms. Learn how we process your data in our Privacy Policy and Cookie Policy.</p>
-            <form onSubmit={handleSubmit}>
-            <input
-                    type="name"
-                    id="name"
-                    name="name"
+        <div  className="auth-modal flex justify-center">
+            
+            <button
+            className="d-flex justify-end  "
+            aria-label="Close"
+            onClick={handleClick}
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+            <h1 className='mt-3 mb-3'>{isSignUp ? 'CREATE ACCOUNT': 'LOG IN'}</h1>
+            <p className='mt-3 mb-3'>By clicking Log In, you agree to our terms. Learn how we process your data in our Privacy Policy and Cookie Policy.</p>
+            <form  className='m-auto' onSubmit={handleSubmit}>
+            
+            {isSignUp && <input
+            className='rounded '
+                    type="userName"
+                    id="userName"
+                    name="userName"
                     placeholder="Username"
                     required={true}
-                    onChange={(e) => setName(e.target.value)}
-                />
+                    onChange={(e) => setuserName(e.target.value)}
+                />}
                 <input
+                className='rounded'
                     type="email"
                     id="email"
                     name="email"
@@ -69,6 +79,7 @@ const Signup = ({ setShowModal,  isSignUp }) => {
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
+                className='rounded'
                     type="password"
                     id="password"
                     name="password"
@@ -77,6 +88,7 @@ const Signup = ({ setShowModal,  isSignUp }) => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 {isSignUp && <input
+                className='rounded'
                     type="password"
                     id="password-check"
                     name="password-check"
@@ -84,12 +96,14 @@ const Signup = ({ setShowModal,  isSignUp }) => {
                     required={true}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />}
-                <input className="secondary-button" type="submit"/>
+                <button style={{
+            background: "linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64))",
+          }} className="text-white secondary-button mt-4 mb-4" type="submit"> Submit </button>
                 <p>{error}</p>
             </form>
 
             <hr/>
-            <h2>GET THE APP</h2>
+            <h2 className='mt-4 mb-5'>GET THE APP</h2>
 
         </div>
     )

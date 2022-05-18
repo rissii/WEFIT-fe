@@ -1,3 +1,4 @@
+import {FaDumbbell} from 'react-icons/fa'
 
 const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {
@@ -8,7 +9,8 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   return (
     <nav>
       <div className="logo-container">
-       
+      <FaDumbbell />
+      Wefit
       </div>
       {!authToken && !minimal && (
         <button
