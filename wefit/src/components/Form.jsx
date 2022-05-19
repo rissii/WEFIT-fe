@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
+import server from "../services/server";
 
 export default function Form() {
   const [formData, setFormData] = useState({
-    // user_id: cookies.UserId,
     gender: 0,
     age: 0,
     fitness_level: 1,
@@ -22,12 +21,9 @@ export default function Form() {
   });
 
   const handleSubmit = async (e) => {
-    console.log("submitted");
     e.preventDefault();
     try {
-      const response = await axios.put("http://localhost:8080/user/update", {
-        formData,
-      });
+      const response = await server.updateUser(formData)
       console.log(response);
       // const success = response.status === 200
       // if (success) navigate('/dashboard')
