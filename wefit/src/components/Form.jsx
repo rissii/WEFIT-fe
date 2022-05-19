@@ -351,7 +351,7 @@ export default function Form() {
             </div>
             <label htmlFor="url">Profile Photo</label>
             <input
-            className="w-75 m-auto"
+            className="w-75 mb-5 ml-auto mr-auto"
               type="url"
               name="url"
               id="url"
@@ -365,7 +365,7 @@ export default function Form() {
             </div>
         
 
-            <button className="text-white secondary-button mt-4 mb-4" type="submit" style={{
+            <button className="text-white secondary-button mb-4 w-50 m-auto" type="submit" style={{
             background: "linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64))",
           }}> Submit </button>
       

@@ -125,7 +125,13 @@ flex-direction: column;
 margin: auto;
     border-top: solid 1px rgb(213, 213, 213);
 }
+.onboarding form h2 {
+    font-size: 35px;
+}
+
+
 .onboarding form {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     border-radius: 5%;
@@ -152,12 +158,13 @@ margin: auto;
     border-radius: 10px;
 }
 .onboarding form label {
+    min-width: 6rem;
     margin: 10px 0;
 }
 .onboarding form .multiple-input-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    margin: auto;
 }
 .onboarding form input::-webkit-outer-spin-button,
 .onboarding form input::-webkit-inner-spin-button {

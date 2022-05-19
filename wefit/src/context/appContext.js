@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
     const response = await server.signup(currentUser);
 
     if (response.status === "ok") {
-      navigate("/");
+      navigate("/form");
     }
     //     const { user } = response.data;
 
