@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import ".././App.css";
 import server from "../services/server.js";
 import women from "../images/women.jpg";
-import { faLocation } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faLocation } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Card() {
+export default function Card({ matches }) {
   useEffect(() => {
     server.getUserData();
   }, []);
@@ -24,7 +24,7 @@ export default function Card() {
         <div className="px-6 py-4">
           <div className="d-flex font-bold text-xl mb-2">Naomi Krempel</div>
 
-          <FontAwesomeIcon className="d-flex mb-3 mt-3" icon={faLocation} />
+          {/* <FontAwesomeIcon className="d-flex mb-3 mt-3" icon={faLocation} /> */}
           <p className="d-flex"> Tel Aviv </p>
         </div>
         <div className="m-auto px-6 pt-4 pb-2">
