@@ -8,12 +8,13 @@ export default function MainPage() {
 
   useEffect(() => {
     server.findMatch().then((response) => setMatches([...response]));
+    console.log(matches);
   }, []);
+
 
   return (
     <div>
       {" "}
-      {matches[0].userName}
       <Card matches={matches} />
     </div>
   );
