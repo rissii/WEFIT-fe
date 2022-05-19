@@ -1,15 +1,20 @@
 import Card from "../components/Card";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ".././App.css";
 import server from "../services/server.js";
+
 export default function MainPage() {
+  const [matches, setMatches] = useState([]);
+
   useEffect(() => {
-    server.findMatch();
+    server.findMatch().then((response) => setMatches([...response]));
   }, []);
+
   return (
     <div>
       {" "}
-      <Card />
+      {matches[0].userName}
+      <Card matches={matches} />
     </div>
   );
 }
