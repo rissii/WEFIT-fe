@@ -274,3 +274,10 @@ nav .logo-container .logo {
     display: flex;
     flex-direction: column;
 }
+
+
+.match {
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+}

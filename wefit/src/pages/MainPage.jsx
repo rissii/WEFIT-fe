@@ -7,10 +7,12 @@ export default function MainPage() {
 
   useEffect(() => {
     server.findMatch().then((response) => setMatches([...response]));
+    console.log(matches);
   }, []);
 
+
   return (
-    <div>
+    <div >
       {" "}
       {matches.map((match, index) => (
         <div className="card max-w-xl rounded overflow-hidden shadow-lg mt-5 ml-auto mr-auto">
@@ -67,6 +69,10 @@ export default function MainPage() {
               </span>
             )}
           </div>
+
+          <button className=" w-50 m-auto primary-button">
+                    Connect
+                   </button>
         </div>
       ))}
     </div>
