@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import server from "../services/server";
+import { useNavigate } from "react-router-dom";
 
 export default function Form() {
+
+  let navigate = useNavigate()
   const [formData, setFormData] = useState({
     gender: 0,
     age: 0,
@@ -30,6 +33,8 @@ export default function Form() {
     } catch (err) {
       console.log(err);
     }
+    navigate("/main")
+    
   };
 
   const handleChange = (e) => {
