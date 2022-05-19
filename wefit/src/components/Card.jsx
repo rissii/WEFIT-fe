@@ -10,20 +10,12 @@ export default function Card() {
     server.getUserData();
   }, []);
 
-  const handleSwipeLeft = () => {
-    return;
-  };
-
-  const handleSwipeRight = () => {
-    alert("next");
-  };
+ 
 
   return (
     <>
       <div
         className="card max-w-sm rounded overflow-hidden shadow-lg mt-5 ml-auto mr-auto"
-        onSwipeLeft={handleSwipeLeft}
-        onSwipeRight={handleSwipeRight}
       >
         <img
           src="https://www.keypersonofinfluence.com/wp/wp-content/uploads/2016/01/womens-fitness-1024x649.jpg"
