@@ -56,7 +56,7 @@ export default function MainPage() {
             )}
           </div>
 
-          <button className="primary-button" onClick={handleClick}>
+          <button className=" w-50 m-auto primary-button">
                     Connect
                    </button>
         </div>
