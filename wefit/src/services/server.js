@@ -46,11 +46,14 @@ async function logout() {
 async function getUserData() {
   try {
     const response = await api.get("/user/getUser");
+    console.log(response);
     return response.data;
   } catch (error) {
     if (error.response) {
+      console.log("error");
       return error.response.data;
     } else {
+      console.log("error2");
       return { status: "error", message: error.message };
     }
   }
@@ -69,10 +72,12 @@ async function updateUser(updatedDataObj) {
   }
 }
 
-export default {
+const server = {
   signup,
   login,
   logout,
   getUserData,
   updateUser,
 };
+
+export default server;
