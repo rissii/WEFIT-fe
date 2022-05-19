@@ -16,7 +16,7 @@ export default function MainPage() {
       {" "}
       {matches.map((match, index) => (
         <div className="card max-w-xl rounded overflow-hidden shadow-lg mt-5 ml-auto mr-auto">
-          <img src={match.imageUrl} alt="" />
+          <img className="m-auto w-50" src={match.imageUrl} alt="" />
           <div className="px-6 py-4">
             <div className="d-flex font-bold text-xl mb-2">
               {match.userName}
