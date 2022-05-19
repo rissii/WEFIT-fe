@@ -2,14 +2,11 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
-
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const user = localStorage.getItem("user");
 
-const user = localStorage.getItem("user");
-debugger
   const [isUser, setisUser] = useState(user ? JSON.parse(user) : null);
 
   const navigate = useNavigate();
@@ -19,20 +16,19 @@ debugger
     withCredentials: true,
   });
 
-  const addUserToLocalStorage = ( user ) => {
+  const addUserToLocalStorage = (user) => {
     localStorage.setItem("user", JSON.stringify(user));
   };
 
-  const registerUser = async (currentUser ) => {
+  const registerUser = async (currentUser) => {
     console.log(currentUser);
     const response = await api.post("/auth/signup", currentUser);
 
-//     const { user } = response.data;
-   
+    //     const { user } = response.data;
 
-// addUserToLocalStorage(
-//     user
-// );
+    // addUserToLocalStorage(
+    //     user
+    // );
 
     navigate("/form");
   };
@@ -45,7 +41,7 @@ debugger
     const user  = response.data.data;
    
 
-    addUserToLocalStorage( user );
+    addUserToLocalStorage(user);
     setTimeout(() => {
       navigate("/form");
     }, 3000);

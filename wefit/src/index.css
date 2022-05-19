@@ -118,6 +118,12 @@ nav .logo-container .logo {
     border-top: solid 1px rgb(213, 213, 213);
 }
 .onboarding form {
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+    border-radius: 5%;
+    /* height: 20rem; */
+    width: 50%;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
 }
@@ -127,6 +133,7 @@ nav .logo-container .logo {
     padding: 20px;
     width: 35%;
     text-align: start;
+    
 }
 .onboarding form input {
     padding: 15px 30px;
