@@ -1,9 +1,9 @@
 import axios from "axios";
 const api = axios.create({
-  baseURL: "https://itc-hackathon-be.herokuapp.com",
+  baseURL: "http://localhost:8080",
   withCredentials: true,
 });
-
+// "https://itc-hackathon-be.herokuapp.com"
 async function login(data) {
   try {
     const response = await api.post("/auth/login", data);
@@ -59,6 +59,30 @@ async function getUserData() {
   }
 }
 
+async function findMatch() {
+  try {
+    const userResponse = await server.getUserData();
+    const id = userResponse.data.mock_id;
+    const dist = userResponse.data.dist;
+    const response = await api.get(`/user/findMatch`, {
+      params: {
+        id: id,
+        dist: dist,
+      },
+    });
+    console.log(response.data.data);
+    return response.data.data;
+  } catch (error) {
+    if (error.response) {
+      console.log("error");
+      return error.response.data;
+    } else {
+      console.log("error2");
+      return { status: "error", message: error.message };
+    }
+  }
+}
+
 async function updateUser(updatedDataObj) {
   try {
     const response = await api.put("/user/update", updatedDataObj);
@@ -78,6 +102,7 @@ const server = {
   logout,
   getUserData,
   updateUser,
+  findMatch,
 };
 
 export default server;
