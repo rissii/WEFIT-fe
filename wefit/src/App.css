@@ -293,3 +293,9 @@ margin: auto;
     display: flex;
     flex-direction: column;
 }
+
+
+.card {
+    max-width: unset;
+    width: 32rem;
+}
