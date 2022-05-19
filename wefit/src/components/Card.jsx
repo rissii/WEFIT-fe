@@ -30,7 +30,9 @@ export default function Card({ matches }) {
           alt=""
         />
         <div className="px-6 py-4">
-          <div className="d-flex font-bold text-xl mb-2">Naomi Krempel</div>
+          <div className="d-flex font-bold text-xl mb-2">
+            {matches[0].userName}
+          </div>
 
           {/* <FontAwesomeIcon className="d-flex mb-3 mt-3" icon={faLocation} /> */}
           <p className="d-flex"> Tel Aviv </p>
